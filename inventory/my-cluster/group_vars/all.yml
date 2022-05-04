@@ -29,4 +29,4 @@ metal_lb_speaker_tag_version: "v0.12.1"
 metal_lb_controller_tag_version: "v0.12.1"
 
 # metallb ip range for load balancer
-metal_lb_ip_range: "10.242.1.51-10.242.1.60"
+metal_lb_ip_range: "10.242.1.55-10.242.1.60"
