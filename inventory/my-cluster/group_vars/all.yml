@@ -1,5 +1,5 @@
 ---
-k3s_version: v1.23.4+k3s1
+k3s_version: v1.23.6+k3s1
 # this is the user that has ssh access to these machines
 ansible_user: ubuntu
 systemd_dir: /etc/systemd/system
@@ -18,8 +18,8 @@ apiserver_endpoint: "10.242.1.46"
 k3s_token: "Fsdfhskjhsgfushdfsbf3245d53"
 
 # change these to your liking, the only required one is--no-deploy servicelb
-extra_server_args: "--no-deploy servicelb --no-deploy traefik"
-extra_agent_args: ""
+extra_server_args: "--no-deploy servicelb --no-deploy traefik --write-kubeconfig-mode 644 --kube-apiserver-arg default-not-ready-toleration-seconds=30 --kube-apiserver-arg default-unreachable-toleration-seconds=30 --kube-controller-arg node-monitor-period=20s --kube-controller-arg node-monitor-grace-period=20s --kubelet-arg node-status-update-frequency=5s"
+extra_agent_args: "--kubelet-arg node-status-update-frequency=5s"
 
 # image tag for kube-vip
 kube_vip_tag_version: "v0.4.3"
