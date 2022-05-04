@@ -5,10 +5,10 @@ ansible_user: ubuntu
 systemd_dir: /etc/systemd/system
 
 # Set your timezone
-system_timezone: "Your/Timezone"
+system_timezone: "America/New_York"
 
 # interface which will be used for flannel
-flannel_iface: "eth0"
+flannel_iface: "enp1s0"
 
 # apiserver_endpoint is virtual ip-address which will be configured on each master
 apiserver_endpoint: "10.242.1.46"
